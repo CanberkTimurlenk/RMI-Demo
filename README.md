@@ -4,7 +4,7 @@ This project was created for demonstration purposes on the RMI feature in Java. 
 
 The server has a method to calculate the shipment price based on the weight and height of the product. The client passes its arguments to this remote method. The shipment price will be returned by the server.
 
-## Firstly run the Server
+## Instructions for Running the Project
 First, run the Server application:
 ```bash
 $ cd ./Server
