@@ -1,6 +1,6 @@
 # Java Remote Method Invocation (RMI) Demo
 
-This repository contains a simple demonstration of **Java RMI (Remote Method Invocation)**, which is a Java-based implementation of **Remote Procedure Call (RPC)**. The project demonstrates that through a simple "Shipment Fee Calculator" example.
+This project demonstrates the use of Java RMI via a simple shipment fee calculator, simulating client-server communication between distributed applications.
 ---
 
 ## 📦 Project Structure
@@ -15,16 +15,23 @@ RMI-Demo/
 
 ## 🛠️ How to Run
 
+Before running the server, you need to start the RMI registry so that the server can bind remote objects to it.
+
+### 1. Start the RMI Registry (if not started automatically):
+```bash
+rmiregistry &
+```
+
 > You may need to run this in the background from the project root.
 
-### 1. Build & Run the Server
+### 2. Build & Run the Server
 ```bash
 cd Server
 mvn clean install -DskipTests
 java -jar target/Server-1.0-SNAPSHOT.jar
 ```
 
-### 2. Build & Run the Client 
+### 3. Build & Run the Client 
 ```bash
 cd Client
 mvn clean install -DskipTests
