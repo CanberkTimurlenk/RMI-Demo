@@ -1,19 +1,42 @@
 # Java Remote Method Invocation (RMI) Demo
 
-This project was created for demonstration purposes on the RMI feature in Java. RMI (Remote Method Invocation) is an implementation of Remote Procedure Call (RPC).
+This repository contains a simple demonstration of **Java RMI (Remote Method Invocation)**, which is a Java-based implementation of **Remote Procedure Call (RPC)**. The project demonstrates that through a simple "Shipment Fee Calculator" example.
+---
 
-The server has a method to calculate the shipment price based on the weight and height of the product. The client passes its arguments to this remote method. The shipment price will be returned by the server.
+## 📦 Project Structure
 
-## Instructions for Running the Project
-First, run the Server application:
-```bash
-$ cd ./Server
-$ mvn install -DskipTests
-$ java -jar target/Server-1.0-SNAPSHOT.jar
 ```
-After the Server application is running, you can run the Client application:
-```bash
-$ cd ./Server
-$ mvn install -DskipTests
-$ java -jar target/Client-1.0-SNAPSHOT.jar
+RMI-Demo/
+├── Shared/     → Interfaces and models shared by both client and server
+├── Server/     → RMI server application (contains remote method implementation)
+├── Client/     → RMI client application (invokes remote method)
 ```
+
+---
+
+## 🛠️ How to Run
+
+> You may need to run this in the background from the project root.
+
+### 1. Build & Run the Server
+```bash
+cd Server
+mvn clean install -DskipTests
+java -jar target/Server-1.0-SNAPSHOT.jar
+```
+
+### 2. Build & Run the Client 
+```bash
+cd Client
+mvn clean install -DskipTests
+java -jar target/Client-1.0-SNAPSHOT.jar
+```
+
+---
+
+## 🔍 What This Project Does
+
+- The client connects to a remote server object over RMI.
+- The server exposes a method to calculate shipping cost based on **weight and height**.
+- The server performs the calculation and returns the result to the client.
+- The goal is to demonstrate the basic usage of RMI in Java, which is a way to implement communication between distributed Java applications.
