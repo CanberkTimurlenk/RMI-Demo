@@ -7,7 +7,6 @@ This repository contains a simple demonstration of **Java RMI (Remote Method Inv
 
 ```
 RMI-Demo/
-├── Shared/     → Interfaces and models shared by both client and server
 ├── Server/     → RMI server application (contains remote method implementation)
 ├── Client/     → RMI client application (invokes remote method)
 ```
